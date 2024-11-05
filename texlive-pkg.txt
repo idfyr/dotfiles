@@ -1,0 +1,13 @@
+tikz-cd
+subfigure
+sectsty
+multirow
+blindtext
+lipsum
+epigraph
+wrapfig
+stmaryrd
+cleveref
+tocloft
+nextpage
+babel-indonesian
