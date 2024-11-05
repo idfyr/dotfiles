@@ -1,0 +1,14 @@
+[Unit]
+Description=MySQL Container
+
+[Container]
+ContainerName=mysql
+Environment=MYSQL_ROOT_PASSWORD=root MYSQL_USER=app MYSQL_PASSWORD=qwerty123
+Image=mysql:8.0.40
+Network=dev
+PublishPort=3306:3306
+UserNS=keep-id:uid=1000,gid=1000
+Volume=mysql.volume:/var/lib/mysql
+
+[Service]
+MemoryMax=768M

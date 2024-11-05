@@ -1,0 +1,14 @@
+services:
+  traefik:
+    # The official v3 Traefik docker image
+    image: docker.io/traefik:v3.2
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.http.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /run/user/1000/podman/podman.sock:/var/run/docker.sock:ro

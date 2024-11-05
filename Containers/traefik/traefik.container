@@ -1,0 +1,14 @@
+[Unit]
+Description=Traefik Proxy
+
+[Container]
+Exec='--api.insecure=true' '--providers.docker=true' '--providers.docker.exposedbydefault=false' '--entryPoints.http.address=:80'
+Image=docker.io/traefik:v3.2
+PublishPort=80:80
+PublishPort=8080:8080
+Network=dev
+SecurityLabelDisable=true
+Volume=%t/podman/podman.sock:/var/run/docker.sock:ro
+
+[Service]
+MemoryMax=256M
