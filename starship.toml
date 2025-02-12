@@ -1,0 +1,29 @@
+add_newline = true
+
+[character]
+success_symbol = '[\$](bold green)'
+error_symbol = "[✗](bold red)"
+use_symbol_for_status = true
+
+[username]
+format = '[$user]($style)@'
+show_always = true
+disabled = false
+
+[hostname]
+ssh_only = false
+trim_at = "."
+disabled = false
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration]($style) "
+
+[directory]
+truncation_length = 6
+truncate_to_repo = true
+disabled = false
+
+[line_break]
+disabled = false
+
