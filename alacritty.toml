@@ -1,0 +1,13 @@
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[terminal.shell]
+program = "/usr/bin/fish"
+
+[font]
+size = 12
+normal.family = "IosevkaTerm NF"
+bold.family = "IosevkaTerm NF"
+italic.family = "IosevkaTerm NF"
+bold_italic.family = "IosevkaTerm NF"
