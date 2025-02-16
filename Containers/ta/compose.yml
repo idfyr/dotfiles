@@ -2,10 +2,10 @@ version: '3'
 
 services:
   minio:
-    image: docker.io/minio:latest
+    image: docker.io/minio/minio:latest
     container_name: minio
     volumes:
-      - ./minio-data:/minio-data:z
+      - ./data/minio-data:/minio-data:z
     ports:
       - 9000:9000
       - 9001:9001
@@ -21,7 +21,7 @@ services:
     image: docker.io/redis:alpine
     container_name: redis
     volumes:
-      - ./redis-data:/data:z
+      - ./data/redis-data:/data:z
     ports:
       - 6379:6379
     environment:
